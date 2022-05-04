@@ -1,29 +1,12 @@
-package model;
+package com.dio.santander.bankline.api.dto;
 
-import java.time.LocalDateTime;
+import com.dio.santander.bankline.api.model.MovimentacaoTipo;
 
-public class Movimentacao {
-    private Integer id;
-    private LocalDateTime dataHora;
+public class NovaMovimentacao {
     private String descricao;
     private Double valor;
     private MovimentacaoTipo tipo;
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public LocalDateTime getDataHora() {
-        return dataHora;
-    }
-
-    public void setDataHora(LocalDateTime dataHora) {
-        this.dataHora = dataHora;
-    }
+    private Integer idConta;
 
     public String getDescricao() {
         return descricao;
@@ -47,5 +30,13 @@ public class Movimentacao {
 
     public void setTipo(MovimentacaoTipo tipo) {
         this.tipo = tipo;
+    }
+
+    public Integer getIdConta() {
+        return idConta;
+    }
+
+    public void setIdConta(Integer idConta) {
+        this.idConta = idConta;
     }
 }
